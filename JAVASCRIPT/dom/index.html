@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- inline eventhandler -->
+    <button onclick="alert('Button Clicked!')">Click Meee</button>
+    <!-- dom property -->
+    <button id="myButton">Click</button>
+
+
+    <button id="btn" style="color: red;">click me</button>
+    <h1 id="title">heeyyy html</h1>
+    <input type="text" id="nameInput" placeholder="Type your name" />
+<p id="output"></p>
+    <script>
+
+const button = document.getElementById("myButton");
+  button.onclick = function() {
+    alert("Button Clicked!");
+  };
+
+//eventlistener handler
+        document.getElementById('btn').addEventListener('click',()=>{
+            console.log("button clicked");
+            
+        })
+        document.getElementById('title').textContent='heyyy javascript'
+
+        document.getElementById('btn').style.color='blue'
+
+
+        const input = document.getElementById("nameInput");
+  const output = document.getElementById("output");
+  
+  input.addEventListener("input", (event) => {
+    output.textContent = `Hello, ${event.target.value}!`;
+  });
+    </script>
+</body>
+</html>
